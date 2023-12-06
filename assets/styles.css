@@ -925,6 +925,10 @@ footer {
     width: 100%;
   }
 
+  .container-leftSide {
+    margin-left: 0;
+  }
+
   .new-release-content {
     grid-template-columns: repeat(2, minmax(10rem, 50%));
   }

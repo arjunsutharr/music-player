@@ -228,7 +228,7 @@ body {
 /* --footer-- */
 
 .footer-song-container {
-  width: clamp(30vw, 20%, 20%);
+  margin-right: 2rem;
 }
 
 .heart-icon {
