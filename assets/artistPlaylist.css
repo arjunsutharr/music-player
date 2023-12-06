@@ -41,6 +41,7 @@ body {
   gap: 0.3rem;
   justify-content: center;
   margin-right: 1rem;
+  margin-top: 1.5rem;
 }
 
 .artist-description-head {
@@ -222,7 +223,7 @@ body {
 }
 
 .song-number {
-  width: 3%;
+  width: 5%;
 }
 
 /* --footer-- */
@@ -239,8 +240,24 @@ body {
   max-width: 15%;
 }
 
-@media screen and (width <= 700px) {
+@media screen and (width <= 900px) {
+  .new-song-details {
+    gap: 2rem;
+  }
+}  
+
+@media screen and (width <= 760px) {
   .ban-icon {
     display: none !important;
   }
+
+  .artist-about {
+    height: 65%;
+  } 
 }  
+
+@media screen and (width <= 500px) {
+  .artist-description {
+    margin-top: 1.5rem;
+  }  
+}

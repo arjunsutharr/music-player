@@ -872,6 +872,11 @@ footer {
     gap: .5rem;
   }
 
+  .container-leftSide {
+    margin-left: 0;
+    gap: 2rem;
+  }
+
   .ban-icon {
     display: none !important;
   }
@@ -927,6 +932,11 @@ footer {
 
   .container-leftSide {
     margin-left: 0;
+    gap: 1rem;
+  }
+
+  .container-rightSide {
+    margin-right: 0;
   }
 
   .new-release-content {
