@@ -28,6 +28,8 @@ body {
   height: 100%;
   overflow: hidden;
   animation: grow 300ms;
+  -webkit-tap-highlight-color: transparent; //This property specifically targets the blue highlight on mobile browsers.
+  user-select: none;
 }
 
 @keyframes grow {
@@ -45,6 +47,7 @@ header {
   margin: 2rem 0;
   align-items: center;
   height: 5vh;
+  padding: 0rem .5rem 0rem 0rem;
 }
 
 .sangeet {
@@ -148,7 +151,7 @@ main {
   width: 80%;
   gap: 1.5rem;
   margin: 0 auto;
-  height: 75vh;
+  height: 86vh;
   overflow-y: hidden;
 }
 
@@ -166,6 +169,7 @@ main {
   scroll-behavior: smooth;
   -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
   scrollbar-width: none; /* Hide scrollbar Firefox */
+  padding-bottom: 8rem;
 }
 
 /* Hide scrollbar for chrome, safari and opera */
@@ -175,7 +179,7 @@ main {
 
 .slider-wrapper {
   position: relative;
-  max-width: 75%;
+  max-width: 95%;
   margin: 0 auto;
   cursor: pointer;
 }
@@ -541,11 +545,14 @@ aside::-webkit-scrollbar {
   /* counter-reset: section; */
 }
 
+.aside-song-number-and-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .song-number {
-  /* counter-increment: section;
-  content: counter(section) "."; */
-  width: 10%;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-family: var(--font-Montserrat-sans-serif);
 }
 
@@ -662,12 +669,13 @@ footer {
   justify-content: space-around;
   height: 10vh;
   width: 100%;
+  padding: 0rem 1rem;
 }
+
 
 .footer-song-container {
   display: flex;
   align-items: center;
-  margin-left: 1rem;
 }
 
 .heart-icon {
@@ -742,6 +750,7 @@ footer {
 }
 
 
+
 /* --icons-- */
 
 .play-icon-effect {
@@ -759,6 +768,10 @@ footer {
   font-size: 100%;
 }
 
+.footer-heart-icon {
+  display: none;
+}
+
 /* all icons present in the page */
 .icons:hover {
   color: white;
@@ -767,6 +780,10 @@ footer {
 
 .fa-heart:hover {
   color: rgb(206, 42, 123) !important;
+}
+
+.footer-song-play-icon, .footer-heart-icon {
+  display: none !important;
 }
 
 
@@ -822,7 +839,7 @@ footer {
 }
 
 .footer-song-details {
-  width: 25%;
+  width: 35%;
 }
 
 
@@ -867,9 +884,14 @@ footer {
 
 
 @media screen and (width <= 700px) {
+
   main {
     width: 95%;
     gap: .5rem;
+  }
+
+  .slider-wrapper {
+    max-width: 95%;
   }
 
   .container-leftSide {
@@ -889,8 +911,8 @@ footer {
     font-size: 60% !important;
   }
 
-  .hide-icons {
-    /* display: none !important; */
+  #volume-control {
+    display: none;
   }
 
   .top-bottom-margin{
@@ -911,19 +933,32 @@ footer {
     word-break: normal;
   }
 
-  .footer-song-container {
-    max-width: 20%;
+  footer {
+    height: 9vh;
+  }
+
+  .footer-song-img {
+    width: 80% !important;
   }
 
 }
 
 @media screen and (width <= 550px) {
-  aside {
+
+  .slider-wrapper {
+    max-width: 100%;
+  }
+
+  .search-container {
     display: none;
   }
 
-  main {
-    /* height: 100%; */
+ .search-icon-below-550 {
+  color: white;
+ }
+
+  aside {
+    display: none;
   }
 
   .main-container {
@@ -945,6 +980,45 @@ footer {
 
   #volume-control {
     display: none !important;
+  }
+
+  footer {
+    justify-content: space-between;
+    padding: 0rem 1.5rem;
+    height: 8vh;
+    width: 96%;
+    margin: 0rem .5rem .5rem .5rem;
+    border-radius: 8px;
+  }
+
+  .footer-other-controls {
+    gap: 1rem;
+  }
+
+  .play-control-container {
+    display: none;
+  }
+
+  .footer-other-controls-icons {
+    display: none !important;
+  }
+
+  .footer-song-play-icon {
+    display: block !important;
+    font-size: 25px !important;
+  }
+
+  .footer-heart-icon {
+    display: block !important;
+    font-size: 25px !important;
+  }
+
+  .footer-other-devices-icon {
+    font-size: 25px !important;
+  }
+
+  .footer-song-img {
+    width: 70% !important;
   }
 
 }

@@ -226,19 +226,13 @@ body {
   width: 5%;
 }
 
-/* --footer-- */
-
-.footer-song-container {
-  margin-right: 2rem;
-}
-
-.heart-icon {
+.aside-song-number-and-details {
   display: flex;
+  align-items: center;
+  gap: .8rem;
 }
 
-.footer-song-details {
-  max-width: 15%;
-}
+
 
 @media screen and (width <= 900px) {
   .new-song-details {
@@ -260,4 +254,8 @@ body {
   .artist-description {
     margin-top: 1.5rem;
   }  
+
+  .listened {
+    display: none;
+  }
 }
