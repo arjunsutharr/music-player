@@ -126,6 +126,11 @@ header {
   background-color: var(--clr-blue);
 }
 
+.search-icon-below-550 {
+  color: white !important;
+  display: none !important;
+}
+
 .bell-icon {
   font-size: 1.2rem;
   position: relative;
@@ -470,6 +475,7 @@ main {
 
 aside {
   width: 25%;
+  padding-bottom: 4rem;
   overflow-y: scroll;
   scroll-behavior: smooth;
   -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
@@ -553,6 +559,7 @@ aside::-webkit-scrollbar {
 
 .song-number {
   font-size: 0.7rem;
+  width: 2rem;
   font-family: var(--font-Montserrat-sans-serif);
 }
 
@@ -599,7 +606,7 @@ aside::-webkit-scrollbar {
 }
 
 .playlist-play-icon-effect {
-  visibility: hidden;
+  visibility: visible;
   position: absolute;
   top: 45%;
   left: 50%;
@@ -670,6 +677,7 @@ footer {
   height: 10vh;
   width: 100%;
   padding: 0rem 1rem;
+  z-index: 10;
 }
 
 
@@ -882,6 +890,12 @@ footer {
   }
 }
 
+@media (width <= 850px) {
+  .playlist-play-icon-effect {
+    left: 70%;
+  }
+}
+
 
 @media screen and (width <= 700px) {
 
@@ -938,7 +952,7 @@ footer {
   }
 
   .footer-song-img {
-    width: 80% !important;
+    width: clamp(40px, 80%, 80%) !important;
   }
 
 }
@@ -953,8 +967,8 @@ footer {
     display: none;
   }
 
- .search-icon-below-550 {
-  color: white;
+  .search-icon-below-550 {
+  display: block !important;
  }
 
   aside {
@@ -1018,14 +1032,13 @@ footer {
   }
 
   .footer-song-img {
-    width: 70% !important;
-  }
+ }
 
 }
 
 @media screen and (width <= 400px) {
   #volume-control {
-    display: none !important;
+    display: none;
   }
   
 }

@@ -208,7 +208,7 @@ body {
 }
 
 .recently-played {
-  height: 33vh;
+  height: 35vh;
   overflow-y: scroll;
   -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
   scrollbar-width: none; /* Hide scrollbar Firefox */
@@ -246,7 +246,7 @@ body {
   }
 
   .artist-about {
-    height: 65%;
+    height: 70%;
   } 
 }  
 
