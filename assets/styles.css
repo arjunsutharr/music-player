@@ -606,7 +606,7 @@ aside::-webkit-scrollbar {
 }
 
 .playlist-play-icon-effect {
-  visibility: visible;
+  visibility: hidden;
   position: absolute;
   top: 45%;
   left: 50%;
